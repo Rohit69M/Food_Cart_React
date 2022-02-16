@@ -1,0 +1,22 @@
+.Footer {
+  text-align: center;
+  width: 100%;
+  p {
+    text-align: center;
+    background-color: $color-footer;
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .Footer {
+    text-align: center;
+    width: 100%;
+    p {
+      text-align: center;
+      background-color: $color-footer;
+      font-size: 12px;
+      padding: 10px;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+// .Category_container {
+//   width: 20%;
+//   background: $color-categoy;
+
+.category {
+  & button {
+    margin: 0px;
+    cursor: pointer;
+    padding: 15px;
+    display: block;
+    background-color: $color-categoy;
+    border: none;
+    color: rgb(46, 46, 46);
+    border-bottom: 1px solid rgb(202, 198, 198);
+    width: 100%;
+  }
+}

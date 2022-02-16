@@ -1,0 +1,92 @@
+@import "../mixins";
+
+.Header_container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  box-sizing: border-box;
+  height: 100px;
+  @include border-shadow;
+  &-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    & img {
+      width: 40%;
+      height: 70px;
+      align-self: center;
+    }
+
+    &-links {
+      position: absolute;
+      bottom: 20px;
+      left: 25%;
+      & a {
+        text-decoration: none;
+        color: black;
+        padding: 20px;
+      }
+    }
+  }
+
+  &-cart {
+    width: 60%;
+    &-logo {
+      text-decoration: none;
+      color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+      width: 120px;
+      background-color: $color-primarygrey;
+      position: absolute;
+      bottom: 5px;
+      right: 10px;
+
+      & img {
+        width: 40px;
+        height: 30px;
+      }
+    }
+    &-links {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      & a {
+        text-decoration: none;
+        padding: 7px;
+        color: black;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .Header_container-nav {
+    & img {
+      width: 50%;
+      height: 70;
+    }
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .Header_container {
+    width: 100%;
+  }
+  .Header_container-cart-logo {
+    bottom: 30px;
+  }
+  .Header_container-nav {
+    & img {
+      width: 80%;
+      height: 60px;
+    }
+  }
+  .Header_container-nav-links {
+    display: none;
+  }
+  .Header_container-cart-links {
+    display: none;
+  }
+}

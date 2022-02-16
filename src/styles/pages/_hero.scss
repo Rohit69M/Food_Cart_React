@@ -1,0 +1,10 @@
+@import "../mixins";
+
+.Hero_container {
+  margin-top: 30px;
+  position: relative;
+  @include border-shadow;
+  & img {
+    width: 100%;
+  }
+}

@@ -1,0 +1,32 @@
+@import "../mixins";
+
+.group {
+  margin-top: 40px;
+  margin-left: 20px;
+  position: relative;
+  & input {
+    display: block;
+    width: 65%;
+    height: 30px;
+    border: none;
+    border-bottom: 1.7px solid rgb(184, 181, 181);
+    &:focus {
+      outline: none;
+      border-color: $color-label;
+    }
+
+    &:focus ~ .input_label {
+      @include shrinklable;
+    }
+  }
+
+  & label {
+    position: absolute;
+    top: 5px;
+    margin-left: 10px;
+    transition: 300ms ease all;
+  }
+  .shrink {
+    @include shrinklable;
+  }
+}

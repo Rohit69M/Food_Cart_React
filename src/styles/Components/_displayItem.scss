@@ -1,0 +1,115 @@
+@import "../mixins";
+
+.Display_conatiner {
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  @include border-shadow;
+
+  & img {
+    width: 26%;
+    height: 160px;
+  }
+  & .content {
+    line-height: 40px;
+    text-align: center;
+    & p {
+      font-size: 14px;
+    }
+  }
+}
+
+.enable {
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  position: relative;
+  @include border-shadow;
+
+  & img {
+    width: 26%;
+    min-height: 160px;
+  }
+
+  & .contentLeft {
+    line-height: 40px;
+    text-align: center;
+    & p {
+      font-size: 14px;
+    }
+  }
+}
+
+@media only screen and (max-width: 696px) {
+  .enable .Display_conatiner img {
+    width: 12%;
+    height: 110px;
+  }
+  .Display_conatiner {
+    display: flex;
+    align-items: center;
+    & p {
+      font-size: 10px;
+      line-height: 23px;
+    }
+    & img {
+      width: 26%;
+      height: 110px;
+    }
+  }
+  .enable {
+    & p {
+      line-height: 23px;
+      font-size: 10px;
+    }
+    & img {
+      width: 20%;
+      height: 100px;
+    }
+  }
+}
+@media only screen and (max-width: 580px) {
+  .Display_conatiner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    @include border-shadow;
+
+    & img {
+      width: 20%;
+      height: 100px;
+    }
+    & .content {
+      line-height: 20px;
+      text-align: center;
+      & p {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .enable {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    @include border-shadow;
+
+    & img {
+      width: 20%;
+      height: 160px;
+    }
+
+    & .contentLeft {
+      line-height: 20px;
+      text-align: center;
+      & p {
+        font-size: 12px;
+      }
+    }
+  }
+}

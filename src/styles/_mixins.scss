@@ -1,0 +1,9 @@
+@mixin border-shadow {
+  box-shadow: 5px 5px 5px rgb(228, 220, 220);
+}
+
+@mixin shrinklable {
+  top: -24px;
+  font-size: 14px;
+  color: $color-label;
+}
